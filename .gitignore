@@ -4,6 +4,7 @@
 /data/clusters.test.json
 /data/clusters.json
 /obj/test
-/docker/id_rsa*
 /.vscode
-package-lock.json
+/package-lock.json
+/docker/id_rsa*
+/docker/.npmrc
