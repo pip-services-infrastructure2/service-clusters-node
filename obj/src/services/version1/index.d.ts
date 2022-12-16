@@ -1,1 +1,1 @@
-export { ClustersHttpServiceV1 } from './ClustersHttpServiceV1';
+export { ClustersCommandableHttpServiceV1 as ClustersHttpServiceV1 } from './ClustersCommandableHttpServiceV1';

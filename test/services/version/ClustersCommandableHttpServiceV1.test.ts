@@ -8,7 +8,7 @@ import { References } from 'pip-services3-commons-nodex';
 import { ClusterV1 } from '../../../src/data/version1/ClusterV1';
 import { ClustersMemoryPersistence } from '../../../src/persistence/ClustersMemoryPersistence';
 import { ClustersController } from '../../../src/logic/ClustersController';
-import { ClustersHttpServiceV1 } from '../../../src/services/version1/ClustersHttpServiceV1';
+import { ClustersCommandableHttpServiceV1 } from '../../../src/services/version1/ClustersCommandableHttpServiceV1';
 
 let httpConfig = ConfigParams.fromTuples(
     "connection.protocol", "http",
@@ -40,16 +40,16 @@ let CLUSTER2: ClusterV1 = {
     inactive_tenants: ['4']
 };
 
-suite('ClustersHttpServiceV1', ()=> {    
+suite('ClustersCommandableHttpServiceV1', ()=> {    
     let persistence: ClustersMemoryPersistence;
-    let service: ClustersHttpServiceV1;
+    let service: ClustersCommandableHttpServiceV1;
     let rest: any;
 
     suiteSetup(async () => {
         persistence = new ClustersMemoryPersistence();
         let controller = new ClustersController();
 
-        service = new ClustersHttpServiceV1();
+        service = new ClustersCommandableHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
