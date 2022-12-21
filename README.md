@@ -93,7 +93,7 @@ Example of microservice configuration
 
 - descriptor: "service-clusters:controller:default:default:1.0"
 
-- descriptor: "service-clusters:service:http:default:1.0"
+- descriptor: "service-clusters:service:commandable-http:default:1.0"
   connection:
     protocol: "http"
     host: "0.0.0.0"
